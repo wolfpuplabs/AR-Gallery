@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Product Showcase</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Discover Our AR Products</h1>
+    </header>
+    <section class="hero">
+        <h2>Experience Innovation Like Never Before</h2>
+    </section>
+    <section class="highlights">
+        <h2>Highlights</h2>
+        <div class="highlight-item">
+            <img src="highlight1.jpg" alt="Highlight 1">
+            <p>Classic Collection</p>
+        </div>
+    </section>
+    <section class="get-started">
+        <h2>Get Started</h2>
+        <div class="product">
+            <h3>Volkswagen Golf GTI 1976</h3>
+            <model-viewer src="product1.glb" alt="A 3D model of product 1" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate></model-viewer>
+        </div>
+        <div class="product">
+            <h3>Porsche 356 Wagon 1963</h3>
+            <model-viewer src="product2.glb" alt="A 3D model of product 2" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate></model-viewer>
+        </div>
+        <div class="product">
+            <h3>Volvo 850 T-5R</h3>
+            <model-viewer src="product3.glb" alt="A 3D model of product 3" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate></model-viewer>
+        </div>
+    
+    <footer>
+        <p>&copy; 2024 AR Products. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function handleFiles(event) {
+            const file = event.target.files[0];
+            const url = URL.createObjectURL(file);
+            const modelViewer = document.getElementById('uploadedModel');
+            modelViewer.src = url;
+        }
+    </script>
+</body>
+</html>
