@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #1b1c1c;
+    color: #333;
+}
+header {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+header h1 {
+    margin: 0;
+}
+.hero {
+    background: url('your-hero-image.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+.hero h2 {
+    margin: 0;
+}
+.highlights, .get-started, .uploader {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+.highlights h2, .get-started h2, .uploader h2 {
+    margin-bottom: 1.5rem;
+}
+.highlight-item {
+    margin-bottom: 2rem;
+}
+.highlight-item img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+.product {
+    margin-bottom: 2rem;
+}
+.product model-viewer, #uploadedModel {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+}
+.uploader input {
+    margin: 1rem 0;
+}
+footer {
+    background: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+@media (min-width: 600px) {
+    .highlights, .get-started, .uploader {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .highlight-item, .product, .uploader {
+        width: 45%;
+        margin: 1rem;
+    }
+}
